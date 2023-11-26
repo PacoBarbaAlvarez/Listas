@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/peliculas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Peliculas" />
+    <item
+        android:id="@+id/editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Editar Pelicula" />
+    <item
+        android:id="@+id/app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="APP" />
+
+    <item
+        android:title="Comparte"
+        android:icon="@drawable/compartir"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Salir" />
+
+
+
+</menu>
