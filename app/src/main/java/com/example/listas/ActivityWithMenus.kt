@@ -3,7 +3,9 @@ import android.content.Intent
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AlertDialog
 
 open class ActivityWithMenus: AppCompatActivity() {
 
@@ -47,6 +49,32 @@ open class ActivityWithMenus: AppCompatActivity() {
                 actividadActual = 2;
                 val intent = Intent(this, Info::class.java)
                 startActivity(intent)
+                true
+            }
+
+            R.id.buscar ->{
+                actividadActual = 3;
+                if (R.id.Filtro== View.VISIBLE) {
+                    R.id.Filtro= View.INVISIBLE
+                } else {
+                    R.id.Filtro = View.VISIBLE
+                }
+                true
+            }
+            R.id.salir ->{
+                actividadActual = 4;
+                //Hacemos que al seleccionar exit, nos muestre un mensaje de si quermos salir de la app o no
+                var miDialogo = AlertDialog.Builder(this)
+                AlertDialog.Builder(this)
+                    .setTitle("Salir")
+                    .setMessage("¿Desea Salir de la Aplicacion?")
+                    .setCancelable(false)
+                    .setPositiveButton(android.R.string.ok, { dialog, which ->
+                        finish()
+                    })
+                    .setNegativeButton(android.R.string.cancel,  { dialog, which ->
+                    })
+                    .show()
                 true
             }
             else -> super.onOptionsItemSelected(item)

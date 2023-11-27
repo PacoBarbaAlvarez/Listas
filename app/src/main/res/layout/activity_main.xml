@@ -22,6 +22,7 @@
         android:layout_height="44dp"
         android:contentDescription="filtro"
         android:ems="10"
+        android:visibility="invisible"
         android:inputType="text"
         android:maxLines="1"
         android:textSize="18sp"
